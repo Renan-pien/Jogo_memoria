@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <title>Jogo de Memória</title>
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <div id="tela-inicial" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 9999;">
+    <button id="botaoIniciar" class="btn btn-primary">clique para Iniciar o Jogo <br><strong>memorize as cartas para <br>obter a pista! &#128513</strong></button>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Jogo da Memória</h1>
+    </header>
+
+    <section class="score-panel">
+      <!---<ul class="stars">
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul> --->
+
+      <span class="moves">0</span> Movimentos
+
+      <div class="restart">
+        <i class="fa fa-repeat"></i>
+      </div>
+
+      <div class="cronometro">00:00:00</div>
+    </section>
+
+    <ul class="deck"></ul>
+  </div>
+
+  <div class="modal fade" id="modalFimDeJogo" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Fim do Jogo!</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal" id="botaoSim">Jogar Novamente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
